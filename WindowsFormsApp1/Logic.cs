@@ -12,14 +12,9 @@
                 if (a > max)
                 {
                     max = a;
-                    i++;
-                    number = number / 10;
                 }
-                else
-                {
-                    i++;
-                    number = number / 10;
-                }
+                i++;
+                number /= 10;
             }
             return max;
         }
