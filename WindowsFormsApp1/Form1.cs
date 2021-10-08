@@ -16,5 +16,15 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (!int.TryParse(maxtext.Text, out int value))
+            {
+                MessageBox.Show("Вы ввели не число!", "Предупреждение", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            int max = Logic.FindMax(value);
+        }
     }
 }
